@@ -1,0 +1,10 @@
+<h1>Game score</h1>
+
+
+<p>your word: <%= @word %></p>
+<p>your score: <%= @score[:score] %></p>
+<p>message: <%= @score[:message] %></p>
+<p>time: <%= @score[:time] %></p>
+<p>letters: <%= @letters %></p>
+
+<%= link_to "Try again", new_path, class:"link" %>

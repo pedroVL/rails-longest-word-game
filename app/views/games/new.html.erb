@@ -1,0 +1,20 @@
+<h1>Welcome to the longest word-game!</h1>
+<p>Here is your grid:</p>
+<ul class="list">
+  <% @letters.each do |letter| %>
+    <li class="letters"><%= letter %></li>
+  <% end %>
+</ul>
+
+<p>What's your best shot?</p>
+
+  <form action="/score" method="get">
+    <%= hidden_field_tag :letters, @letters %>
+    <%= hidden_field_tag :time, @start_time %>
+
+    <input type="text" name="word" placeholder="Write a word" class="input">
+    <input type="submit" value="Go" class="btn">
+
+
+  </form>
+
